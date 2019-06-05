@@ -4,14 +4,14 @@ Final Project to showcase the Sorting Algorithm created by the group members of 
 
 ## Preview
 
-![Page Preview]-Insert image here-
+![Page Preview](-Insert image here-)
 
 ## Contents
 
 We are using a one-page design with the following menus:
 
 ![Home]
-Displays the group name in a banner form
+(Displays the group name in a banner form)
 
 ![Sorting]
 Displays the 5 types of sorting in a blockquote
