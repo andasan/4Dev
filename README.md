@@ -4,7 +4,7 @@ Final Project to showcase the Sorting Algorithm created by the group members of 
 
 ## Preview
 
-![Page Preview](-Insert image here-)
+[![Page Preview] -Insert image here-]
 
 ## Contents
 
