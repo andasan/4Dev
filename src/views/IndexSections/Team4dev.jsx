@@ -27,6 +27,7 @@ class Team4dev extends React.Component {
                   src={require("assets/img/gustavo.jpg")}
                   style={{ width: "150px" }}
                 />
+                <small>gustavo.stamm@gmail.com<br/>Production Engineer and Web Developer</small>
               </Col>
               <Col sm="3" xs="6">
                 <small className="d-block text-uppercase font-weight-bold mb-4">

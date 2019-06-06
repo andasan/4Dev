@@ -43,13 +43,13 @@ class Signup extends React.Component {
               </p>
             </Col>
             <Col className="mb-lg-auto" lg="6">
-              <Card className="card-register" style={{background: "#3a3f99"}}>
+              <Card className="card-register" style={{background: "#1d2963"}}>
                 <CardHeader>
                   <CardImg
                     alt="..."
                     src={require("assets/img/square-cyan.png")}
                   />
-                  <CardTitle tag="h4">Contact Us</CardTitle>
+                  <CardTitle tag="h4">Contact</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Form className="form">
