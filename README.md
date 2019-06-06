@@ -4,17 +4,28 @@ Final Project to showcase the Sorting Algorithm created by the group members of 
 
 ## Preview
 
--Insert image here-
+![Page Preview]-Insert image here-
+
+## Note
+
+If you open it directly in the browser, you will see an empty page.
+To use on a browser, run `npm install`.
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`
+
 
 ## Contents
 
 We are using a one-page design with the following menus:
 
-*[Home](#) Displays the group name in a banner form
+![Home]
+Displays the group name in a banner form
 
-*[Sorting](#) Displays the 5 types of sorting in a blockquote
+![Sorting]
+Displays the 5 types of sorting in a blockquote
 
-*[Contact](#) Display the contact information of the group as well a section the team member's photos
+![Contact]
+Display the contact information of the group as well a section the team member's photos
 
 ## Bugs and Issues
 
