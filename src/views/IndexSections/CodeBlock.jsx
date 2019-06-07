@@ -38,8 +38,9 @@ class CodeBlock extends React.Component {
   
   render() {
     const bubbleSort = `
-    const list = [2, 1, 4, 3];
-    console.log(bubbleSort(list));
+    const numList = [5, 1, 3, 4, 2];
+    const result = bubbleSort(numList)
+    console.log(result);
 
     function bubbleSort(list){
       let swap = false, value = 0;
@@ -59,41 +60,42 @@ class CodeBlock extends React.Component {
    }`
 
     const insertionSort = `
-    const list = [2, 1, 4, 3];
-    console.log(insertionSort(list));
+    const numList = [5, 1, 3, 4, 2];
+    const result = insertionSort(numList)
+    console.log(result);
     
-    function insertionSort (items) {
-        // loop through the items in the sorted array
-        for (var i = 0; i < items.length; i++) {
-            let value = items[i];
+    function insertionSort (list) {
+        // loop through the list in the sorted array
+        for (var i = 0; i < list.length; i++) {
+            let value = list[i];
         
-            // compare selected item to each items in the array
-            for (var j = i - 1; j > -1 && items[j] > value; j--) {
+            // compare selected item to each list in the array
+            for (var j = i - 1; j > -1 && list[j] > value; j--) {
                 // Change the index number of the item
-                items[j + 1] = items[j];
+                list[j + 1] = list[j];
             }
-            // Sorted items correctly
-            items[j + 1] = value;
+            // Sorted list correctly
+            list[j + 1] = value;
         }
-        return items
+        return list
     }`
 
     const mergeSort = `
-    let unsortedArray = [340, 1, 3, 3, 76, 23, 4, 12, 122, 7642, 646];
-    let result = mergeSort(unsortedArray);
+    const numList = [9, 5, 8, 1, 7, 3, 4, 2, 6];
+    const result = mergeSort(numList)
     console.log(result);
 
-    function mergeSort(unsortedArray) {
+    function mergeSort(list) {
         // No need to sort the array if the array only has one element or empty
-        if (unsortedArray.length <= 1) {
-            return unsortedArray;
+        if (list.length <= 1) {
+            return list;
         }
         // In order to divide the array in half, we need to figure out the middle
-        const middle = Math.floor(unsortedArray.length / 2);
+        const middle = Math.floor(list.length / 2);
     
         // This is where we will be dividing the array into left and right
-        const left = unsortedArray.slice(0, middle);
-        const right = unsortedArray.slice(middle);
+        const left = list.slice(0, middle);
+        const right = list.slice(middle);
     
         // Using recursion to combine the left and right
         return merge(mergeSort(left), mergeSort(right));
@@ -121,9 +123,9 @@ class CodeBlock extends React.Component {
     };`
 
     const selectionSort = `
-    const list = [4, 2, 3, 1, 5];
-    const sorted = selectionSort(list);
-    console.log(sorted);
+    const numList = [5, 1, 3, 4, 2];
+    const result = selectionSort(numList)
+    console.log(result);
 
     function selectionSort(list)
     {
@@ -147,9 +149,9 @@ class CodeBlock extends React.Component {
     `
 
     const quickSort = `
-    const list = [3, 2, 4, 1, 5];
-    const sorted = quickSort(list);
-    console.log(sorted);
+    const numList = [5, 1, 3, 4, 2];
+    const result = quickSort(numList)
+    console.log(result);
 
     function quickSort(list){
         let len = list.length;
@@ -173,7 +175,7 @@ class CodeBlock extends React.Component {
               right.push(list[i]); 
             }
         }
-        //recursive function (... = spread syntax)
+        //recursive function (...  spread syntax)
         return [...quickSort(left), pivot, ...quickSort(right)]; 
      }
     `
