@@ -7,3 +7,9 @@
     @include linear-gradient($primary-states, $primary);
   }
 }
+
+.section.section-typo{
+  .clouds, .cloud {
+    @include linear-gradient($primary-states, $primary);
+  }
+}

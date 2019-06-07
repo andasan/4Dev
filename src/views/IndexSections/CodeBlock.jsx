@@ -135,7 +135,7 @@ class CodeBlock extends React.Component {
 
     function quickSort(list){
         let len = list.length;
-        let pivot = list[len-1]; //make the last number in the array as the pivot
+        let pivot = list[len-1]; //make the last number as the pivot
         let left = [];
         let right = [];
         
@@ -147,13 +147,16 @@ class CodeBlock extends React.Component {
         {
             if(list[i] < pivot)
             {
-                left.push(list[i]); //push the smaller numbers to the left
+              //push the smaller numbers to the left
+              left.push(list[i]); 
             }
             else{
-                right.push(list[i]); //push the larger numbers to the right
+              //push the larger numbers to the right
+              right.push(list[i]); 
             }
         }
-        return [...quickSort(left), pivot, ...quickSort(right)]; //recursive function (... = spread syntax)
+        //recursive function (... = spread syntax)
+        return [...quickSort(left), pivot, ...quickSort(right)]; 
      }
     `
 
@@ -170,25 +173,28 @@ class CodeBlock extends React.Component {
 
           <Row>
             <Col md="6">
-                <h3>Bubble Sort</h3>
+                <h1>Bubble Sort</h1><br/>
+                <h3>Bubble Sort is the simplest sorting algorithm that works by repeatedly 
+                  swapping the adjacent elements if they are in wrong order.</h3>
+                <br/>
             </Col>
-            <Col md="6"><img alt="..." src={require("assets/img/bubble_sort.gif")} /></Col>
+            <Col md="6"><Code codeString={bubbleSort} language="javascript" /></Col>
           </Row>
           <div className="space-30" />
-          <Row>
-            <Col md="12">
-                <Code codeString={bubbleSort} language="javascript" />
-            </Col>
-          </Row>
 
           <div className="space-100" />
           <div id="insertion-code" className="space-100" />
           <div className="space-100" />
 
-          <h3>Insertion Sort</h3>
           <Row>
-            <Col md="12">
+            <Col md="6">
                 <Code codeString={insertionSort} language="javascript" />
+            </Col>
+            <Col md="6">
+              <h1>Insertion Sort</h1><br/>
+              <h3>Insertion sort is a simple sorting algorithm that works 
+                the way we sort playing cards in our hands.</h3>
+              <br/>
             </Col>
           </Row>
           
@@ -196,9 +202,16 @@ class CodeBlock extends React.Component {
           <div id="merge-code" className="space-100" />
           <div className="space-100" />
 
-          <h3>Merge Sort</h3>
           <Row>
-            <Col md="12">
+            <Col md="5">
+              <h1>Merge Sort</h1><br/>
+              <h3>Merge Sort divides input array in two halves, calls itself for 
+                the two halves and then merges the two sorted halves. <br/>
+                <br/>
+                The merge() function is used for merging two halves and is a key process 
+                that assumes, sort and merges the two sorted sub-arrays into one. </h3>
+            </Col>
+            <Col md="7">
                 <Code codeString={mergeSort} language="javascript" />
             </Col>
           </Row>
@@ -207,10 +220,22 @@ class CodeBlock extends React.Component {
           <div id="selection-code" className="space-100" />
           <div className="space-100" />
 
-          <h3>Selection Sort</h3>
           <Row>
-            <Col md="12">
+            <Col md="6">
                 <Code codeString={selectionSort} language="javascript" />
+            </Col>
+            <Col md="6">
+              <h1>Selection Sort</h1><br/>
+              <h3>The selection sort algorithm sorts an array by repeatedly finding the minimum element 
+                from unsorted part and putting it at the beginning. 
+                The algorithm maintains two subarrays in a given array.<br/>
+                <br/>
+                1) The subarray which is already sorted.<br/>
+                2) Remaining subarray which is unsorted.<br/>
+                <br/>
+                In every iteration of selection sort, the minimum element 
+                from the unsorted subarray is picked and moved to the sorted subarray.</h3>
+              <br/>
             </Col>
           </Row>
           
@@ -218,10 +243,20 @@ class CodeBlock extends React.Component {
           <div id="quick-code" className="space-100" />
           <div className="space-100" />
 
-          <h3>Quick Sort</h3>
           <Row>
-            <Col md="12">
+            <Col md="6">
                 <Code codeString={quickSort} language="javascript" />
+            </Col>
+            <Col md="6">
+              <h1>Quick Sort</h1><br/>
+              <h3>Quicksort uses recursion, divide-and-conquer and comparison-sort. It works by partitioning an array 
+                into two sub-arrays and then recursively sorting those arrays independently. To make it clear, let’s put this in 3 main steps:
+                <br/><br/>
+                Choose the pivot (reference value).<br/>
+                Divide the rest of the array in two, placing everything smaller than the pivot on the left and greater than the pivot on the right.<br/>
+                Recursively apply the previous steps to the sub-arrays if they have more than 1 element.
+              </h3>
+              <br/>
             </Col>
           </Row>
           

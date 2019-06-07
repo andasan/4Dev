@@ -69,9 +69,14 @@ class HomeNavbar extends React.Component {
       .getElementById("onTop")
       .scrollIntoView({ behavior: "smooth" });
   };
+  scrollToTeam = () => {
+    document
+      .getElementById("onTeam")
+      .scrollIntoView({ behavior: "smooth" });
+  };
   scrollToContact = () => {
     document
-      .getElementById("onBottom")
+      .getElementById("onContact")
       .scrollIntoView({ behavior: "smooth" });
   };
   scrollToBubble = () => {
@@ -115,7 +120,7 @@ class HomeNavbar extends React.Component {
               title="Designed and Coded by 4Dev"
               tag={Link}
             >
-              <span>4•Dev </span>
+              <span>4•Dev</span>
             </NavbarBrand>
             <button
               aria-expanded={this.state.collapseOpen}
@@ -137,7 +142,7 @@ class HomeNavbar extends React.Component {
             <div className="navbar-collapse-header">
               <Row>
                 <Col className="collapse-brand" xs="6">
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <a href="/">
                     4•Dev
                   </a>
                 </Col>
@@ -204,7 +209,18 @@ class HomeNavbar extends React.Component {
               </UncontrolledDropdown>
               <NavItem>
                 <NavLink
-                  onClick={this.scrollToTop}
+                  data-placement="bottom"
+                  href="#"
+                  rel="noopener noreferrer"
+                  title="Contact"
+                  onClick={this.scrollToTeam}
+                >
+                  <i className="tim-icons icon-molecule-40" />
+                  4•Dev Team
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
                   data-placement="bottom"
                   href="#"
                   rel="noopener noreferrer"
@@ -212,7 +228,7 @@ class HomeNavbar extends React.Component {
                   onClick={this.scrollToContact}
                 >
                   <i className="tim-icons icon-molecule-40" />
-                  Who We Are
+                  Contact
                 </NavLink>
               </NavItem>
             </Nav>

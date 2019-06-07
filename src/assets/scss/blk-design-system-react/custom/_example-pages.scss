@@ -99,6 +99,23 @@
         opacity: 0.1;
       }
     }
+
+    .clouds{
+      animation: move-left-right 1s infinite;
+      position: absolute;
+      transition: 0.5s ease-out;
+      overflow: hidden;
+      border-radius: 20%;
+      &.cloud1{
+        animation: move-left-right 4s infinite;
+        background-image: url("../../assets/img/cloud.svg");
+        height: 300px;
+        width: 300px;
+        opacity: 0.5;
+        left: 3%;
+        top: -21%;
+      }
+    }
 }
 .landing-page {
   overflow-x: hidden;

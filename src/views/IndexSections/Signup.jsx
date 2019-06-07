@@ -18,6 +18,7 @@ import {
   InputGroupText,
   InputGroup,
   Container,
+  UncontrolledTooltip,
   Row,
   Col
 } from "reactstrap";
@@ -26,106 +27,107 @@ class Signup extends React.Component {
   state = {};
   render() {
     return (
-      <div className="section section-signup" id="onContact">
-        <Container>
-          <div className="squares square-1" />
-          <div className="squares square-2" />
-          <div className="squares square-3" />
-          <div className="squares square-4" />
-          <Row className="row-grid justify-content-between align-items-center">
-            <Col lg="6">
-              <h3 className="display-3 text-white">
-                4•Dev{" "}
-                <span className="text-white"> Group</span>
-              </h3>
-              <p className="text-white mb-3">
-                816 Granville St, Vancouver, BC V6Z 1K3
-              </p>
-            </Col>
-            <Col className="mb-lg-auto" lg="6">
-              <Card className="card-register" style={{background: "#1d2963"}}>
-                <CardHeader>
-                  <CardImg
-                    alt="..."
-                    src={require("assets/img/square-cyan.png")}
-                  />
-                  <CardTitle tag="h4">Contact</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Form className="form">
-                    <InputGroup
-                      className={classnames({
-                        "input-group-focus": this.state.fullNameFocus
-                      })}
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="tim-icons icon-single-02" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Full Name"
-                        type="text"
-                        onFocus={e => this.setState({ fullNameFocus: true })}
-                        onBlur={e => this.setState({ fullNameFocus: false })}
-                      />
-                    </InputGroup>
-                    <InputGroup
-                      className={classnames({
-                        "input-group-focus": this.state.emailFocus
-                      })}
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="tim-icons icon-email-85" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Email"
-                        type="text"
-                        onFocus={e => this.setState({ emailFocus: true })}
-                        onBlur={e => this.setState({ emailFocus: false })}
-                      />
-                    </InputGroup>
-                    <InputGroup
-                      className={classnames({
-                        "input-group-focus": this.state.commentFocus
-                      })}
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="tim-icons icon-pencil" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Comment"
-                        type="multiline"
-                        onFocus={e => this.setState({ commentFocus: true })}
-                        onBlur={e => this.setState({ commentFocus: false })}
-                      />
-                    </InputGroup>
-                    <FormGroup check className="text-left">
-                      <Label check>
-                        <Input type="checkbox" />
-                        <span className="form-check-sign" />I agree to the{" "}
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          terms and conditions
-                        </a>
-                        .
-                      </Label>
-                    </FormGroup>
-                  </Form>
-                </CardBody>
-                <CardFooter>
-                  <Button className="btn-round" color="primary" size="lg">
-                    Send
-                  </Button>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+        <section className="section" id="onContact">
+            <Container>
+              <Row>
+                <Col md="6">
+                  <Card className="card-plain">
+                    <CardHeader>
+                      <h1 className="profile-title text-left">Contact</h1>
+                      <h5 className="text-on-back">4•Dev </h5>
+                    </CardHeader>
+                    <CardBody>
+                      <Form>
+                        <Row>
+                          <Col md="6">
+                            <FormGroup>
+                              <label>Your Name</label>
+                              <Input defaultValue="Mike" type="text" />
+                            </FormGroup>
+                          </Col>
+                          <Col md="6">
+                            <FormGroup>
+                              <label>Email address</label>
+                              <Input
+                                placeholder="mike@email.com"
+                                type="email"
+                              />
+                            </FormGroup>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col md="6">
+                            <FormGroup>
+                              <label>Phone</label>
+                              <Input defaultValue="001-12321345" type="text" />
+                            </FormGroup>
+                          </Col>
+                          <Col md="6">
+                            <FormGroup>
+                              <label>Company</label>
+                              <Input defaultValue="CreativeTim" type="text" />
+                            </FormGroup>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col md="12">
+                            <FormGroup>
+                              <label>Message</label>
+                              <Input placeholder="Hello there!" type="text" />
+                            </FormGroup>
+                          </Col>
+                        </Row>
+                        <Button
+                          className="btn-round float-right"
+                          color="primary"
+                          data-placement="right"
+                          id="tooltip341148792"
+                          type="button"
+                        >
+                          Send text
+                        </Button>
+                        <UncontrolledTooltip
+                          delay={0}
+                          placement="right"
+                          target="tooltip341148792"
+                        >
+                          Can't wait for your message
+                        </UncontrolledTooltip>
+                      </Form>
+                    </CardBody>
+                  </Card>
+                </Col>
+                <Col className="ml-auto" md="4">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-primary">
+                      <i className="tim-icons icon-square-pin" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Find us at the office</h4>
+                      <p>
+                        816 Granville St, Vancouver, , <br />
+                        BC V6Z 1K3, <br />
+                        Canada
+                      </p>
+                    </div>
+                  </div>
+                  <div className="info info-horizontal">
+                    <div className="icon icon-primary">
+                      <i className="tim-icons icon-mobile" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Give us a ring</h4>
+                      <p>
+                        4•Dev  <br />
+                        +1 (604) 620-1111 <br />
+                        Mon - Fri, 8:00-22:00
+                      </p>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
     );
   }
 }
