@@ -4,7 +4,7 @@ Final Project to showcase the Sorting Algorithm created by the group members of 
 
 ## Preview
 
-![Page Preview]-Insert image here-
+![Page Preview](https://raw.githubusercontent.com/andasan/4Dev/master/src/assets/img/SS.png)
 
 ## Note
 
