@@ -337,7 +337,7 @@ class CodeBlock extends React.Component {
             </div>
             <div className="modal-body" style={{textAlign:"center"}}>
               <p>
-              <img src={bubbleGIF} alt="selection" height="200px" width="200px"/>
+              <img src={bubbleGIF} alt="bubble" height="200px" width="200px"/>
               </p>
             </div>
           </Modal>
@@ -358,7 +358,7 @@ class CodeBlock extends React.Component {
             </div>
             <div className="modal-body" style={{textAlign:"center"}}>
               <p>
-              <img src={insertionGIF} alt="selection" height="200px" width="200px"/>
+              <img src={insertionGIF} alt="insertion" height="200px" width="200px"/>
               </p>
             </div>
           </Modal>
@@ -379,7 +379,7 @@ class CodeBlock extends React.Component {
             </div>
             <div className="modal-body" style={{textAlign:"center"}}>
               <p>
-              <img src={mergeGIF} alt="selection" height="200px" width="200px"/>
+              <img src={mergeGIF} alt="merge" height="200px" width="200px"/>
               </p>
             </div>
           </Modal>
@@ -421,7 +421,7 @@ class CodeBlock extends React.Component {
             </div>
             <div className="modal-body" style={{textAlign:"center"}}>
               <p>
-              <img src={quickGIF} alt="selection" height="200px" width="200px"/>
+              <img src={quickGIF} alt="quick" height="200px" width="200px"/>
               </p>
             </div>
           </Modal>
