@@ -1,10 +1,18 @@
 import React from "react";
 import Code from 'react-code-prettify';
 
+import bubbleGIF from 'assets/img/bubble-sort.gif'
+import insertionGIF from 'assets/img/insertion-sort.gif'
+import mergeGIF from 'assets/img/merge-sort.gif'
+import selectionGIF from 'assets/img/selection-sort.gif'
+import quickGIF from 'assets/img/quick-sort.gif'
+
 // reactstrap components
 import {
+  Button,
   Container,
   Row,
+  Modal,
   Col
 } from "reactstrap";
 
@@ -12,9 +20,19 @@ class CodeBlock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputFocus: false
+      inputFocus: false,
+      bubbleModal: false,
+      insertionModal: false,
+      mergeModal: false,
+      selectionModal: false,
+      quickModal: false
     };
   }
+  toggleModal = modalState => {
+    this.setState({
+      [modalState]: !this.state[modalState]
+    });
+  };
   componentDidMount() {
   }
   
@@ -173,7 +191,15 @@ class CodeBlock extends React.Component {
 
           <Row>
             <Col md="6">
-                <h1>Bubble Sort</h1><br/>
+                <h1>Bubble Sort</h1>
+                <Button
+                className="btn-icon btn-round"
+                color="success"
+                type="button"
+                onClick={() => this.toggleModal("bubbleModal")}
+                >
+                  <i className="tim-icons icon-triangle-right-17" />
+                </Button>
                 <h3>Bubble Sort is the simplest sorting algorithm that works by repeatedly 
                   swapping the adjacent elements if they are in wrong order.</h3>
                 <br/>
@@ -191,7 +217,15 @@ class CodeBlock extends React.Component {
                 <Code codeString={insertionSort} language="javascript" />
             </Col>
             <Col md="6">
-              <h1>Insertion Sort</h1><br/>
+              <h1>Insertion Sort</h1>
+              <Button
+                className="btn-icon btn-round"
+                color="success"
+                type="button"
+                onClick={() => this.toggleModal("insertionModal")}
+              >
+                <i className="tim-icons icon-triangle-right-17" />
+              </Button>
               <h3>Insertion sort is a simple sorting algorithm that works 
                 the way we sort playing cards in our hands.</h3>
               <br/>
@@ -204,7 +238,15 @@ class CodeBlock extends React.Component {
 
           <Row>
             <Col md="5">
-              <h1>Merge Sort</h1><br/>
+              <h1>Merge Sort</h1>
+              <Button
+                className="btn-icon btn-round"
+                color="success"
+                type="button"
+                onClick={() => this.toggleModal("mergeModal")}
+              >
+                <i className="tim-icons icon-triangle-right-17" />
+              </Button>
               <h3>Merge Sort divides input array in two halves, calls itself for 
                 the two halves and then merges the two sorted halves. <br/>
                 <br/>
@@ -225,7 +267,16 @@ class CodeBlock extends React.Component {
                 <Code codeString={selectionSort} language="javascript" />
             </Col>
             <Col md="6">
-              <h1>Selection Sort</h1><br/>
+              <h1>Selection Sort</h1>
+              <Button
+                className="btn-icon btn-round"
+                color="success"
+                type="button"
+                onClick={() => this.toggleModal("selectionModal")}
+              >
+                <i className="tim-icons icon-triangle-right-17" />
+              </Button>
+              <br/>
               <h3>The selection sort algorithm sorts an array by repeatedly finding the minimum element 
                 from unsorted part and putting it at the beginning. 
                 The algorithm maintains two subarrays in a given array.<br/>
@@ -248,7 +299,15 @@ class CodeBlock extends React.Component {
                 <Code codeString={quickSort} language="javascript" />
             </Col>
             <Col md="6">
-              <h1>Quick Sort</h1><br/>
+              <h1>Quick Sort</h1>
+              <Button
+                className="btn-icon btn-round"
+                color="success"
+                type="button"
+                onClick={() => this.toggleModal("quickModal")}
+              >
+                <i className="tim-icons icon-triangle-right-17" />
+              </Button>
               <h3>Quicksort uses recursion, divide-and-conquer and comparison-sort. It works by partitioning an array 
                 into two sub-arrays and then recursively sorting those arrays independently. To make it clear, let’s put this in 3 main steps:
                 <br/><br/>
@@ -261,6 +320,111 @@ class CodeBlock extends React.Component {
           </Row>
           
           <div className="space-50" />
+
+          <Modal
+            isOpen={this.state.bubbleModal}
+            toggle={() => this.toggleModal("bubbleModal")}
+          >
+            <div className="modal-header justify-content-center">
+              <button
+                className="close"
+                onClick={() => this.toggleModal("bubbleModal")}
+              >
+                <i className="tim-icons icon-simple-remove" />
+              </button>
+              <h4 className="title title-up">Bubble 
+              sort</h4>
+            </div>
+            <div className="modal-body" style={{textAlign:"center"}}>
+              <p>
+              <img src={bubbleGIF} alt="selection" height="200px" width="200px"/>
+              </p>
+            </div>
+          </Modal>
+
+          <Modal
+            isOpen={this.state.insertionModal}
+            toggle={() => this.toggleModal("insertionModal")}
+          >
+            <div className="modal-header justify-content-center">
+              <button
+                className="close"
+                onClick={() => this.toggleModal("insertionModal")}
+              >
+                <i className="tim-icons icon-simple-remove" />
+              </button>
+              <h4 className="title title-up">Insertion 
+              sort</h4>
+            </div>
+            <div className="modal-body" style={{textAlign:"center"}}>
+              <p>
+              <img src={insertionGIF} alt="selection" height="200px" width="200px"/>
+              </p>
+            </div>
+          </Modal>
+
+          <Modal
+            isOpen={this.state.mergeModal}
+            toggle={() => this.toggleModal("mergeModal")}
+          >
+            <div className="modal-header justify-content-center">
+              <button
+                className="close"
+                onClick={() => this.toggleModal("mergeModal")}
+              >
+                <i className="tim-icons icon-simple-remove" />
+              </button>
+              <h4 className="title title-up">Insertion 
+              sort</h4>
+            </div>
+            <div className="modal-body" style={{textAlign:"center"}}>
+              <p>
+              <img src={mergeGIF} alt="selection" height="200px" width="200px"/>
+              </p>
+            </div>
+          </Modal>
+          
+          <Modal
+              isOpen={this.state.selectionModal}
+              toggle={() => this.toggleModal("selectionModal")}
+            >
+              <div className="modal-header justify-content-center">
+                <button
+                  className="close"
+                  onClick={() => this.toggleModal("selectionModal")}
+                >
+                  <i className="tim-icons icon-simple-remove" />
+                </button>
+                <h4 className="title title-up">Selection 
+                sort</h4>
+              </div>
+              <div className="modal-body" style={{textAlign:"center"}}>
+                <p>
+                <img src={selectionGIF} alt="selection" height="200px" width="200px"/>
+                </p>
+              </div>
+            </Modal>
+
+            <Modal
+            isOpen={this.state.quickModal}
+            toggle={() => this.toggleModal("quickModal")}
+          >
+            <div className="modal-header justify-content-center">
+              <button
+                className="close"
+                onClick={() => this.toggleModal("quickModal")}
+              >
+                <i className="tim-icons icon-simple-remove" />
+              </button>
+              <h4 className="title title-up">Insertion 
+              sort</h4>
+            </div>
+            <div className="modal-body" style={{textAlign:"center"}}>
+              <p>
+              <img src={quickGIF} alt="selection" height="200px" width="200px"/>
+              </p>
+            </div>
+          </Modal>
         </Container>
       </div>
     );

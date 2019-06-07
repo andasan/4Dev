@@ -1,22 +1,13 @@
 import React from "react";
-import classnames from "classnames";
-import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
-  CardImg,
-  CardTitle,
-  Label,
   FormGroup,
   Form,
   Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   UncontrolledTooltip,
   Row,
@@ -28,6 +19,11 @@ class Signup extends React.Component {
   render() {
     return (
         <section className="section" id="onContact">
+          <div className="squares square1" />
+          <div className="squares square2" />
+          <div className="squares square3" />
+          <div className="squares square5" />
+          <div className="squares square7" />
             <Container>
               <Row>
                 <Col md="6">
@@ -105,7 +101,7 @@ class Signup extends React.Component {
                     <div className="description">
                       <h4 className="info-title">Find us at the office</h4>
                       <p>
-                        816 Granville St, Vancouver, , <br />
+                        816 Granville St, Vancouver, <br />
                         BC V6Z 1K3, <br />
                         Canada
                       </p>

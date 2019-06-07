@@ -1,5 +1,4 @@
 import React from "react";
-import classnames from "classnames";
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
@@ -14,7 +13,6 @@ class Team4dev extends React.Component {
           src={require("assets/img/cloud.svg")}
         />
         <Container>
-          <div className="clouds cloud1" />
           <div className="space-50" />
           <div id="images">
             <h1 className="mb-12" style={{textAlign: "center"}}>4•Dev Team</h1>
