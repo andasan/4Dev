@@ -6,7 +6,7 @@ Final Project to showcase the Sorting Algorithm created by the group members of 
 
 ![Page Preview](https://raw.githubusercontent.com/andasan/4Dev/master/src/assets/img/SS.png)
 
-### Prerequisites
+## Prerequisites
 
 Install the node modules required
 ```
